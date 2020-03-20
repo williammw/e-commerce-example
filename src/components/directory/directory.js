@@ -9,35 +9,35 @@ class Directory extends React.Component{
             sections: [
                 {
                   title: 'hats',
-                  imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
+                  imageUrl: 'https://app1.legco.gov.hk/gallery/photo/325/11281398304_o.jpg',
                   id: 1,
-                  linkUrl: 'shop/hats'
+                  linkUrl: 'hats'                  
                 },
                 {
                   title: 'jackets',
-                  imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
+                  imageUrl: 'https://app1.legco.gov.hk/gallery/photo/325/11281374526_o.jpg',
                   id: 2,
-                  linkUrl: 'shop/jackets'
+                  linkUrl: 'jackets'
                 },
                 {
                   title: 'sneakers',
-                  imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+                  imageUrl: 'https://app1.legco.gov.hk/gallery/photo/327/16152971745_o.jpg',
                   id: 3,
-                  linkUrl: 'shop/sneakers'
+                  linkUrl: 'sneakers'
                 },
                 {
                   title: 'womens',
-                  imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
+                  imageUrl: 'https://app1.legco.gov.hk/gallery/photo/328/45692388182_o.jpg',
                   size: 'large',
                   id: 4,
-                  linkUrl: 'shop/womens'
+                  linkUrl: 'womens'
                 },
                 {
                   title: 'mens',
-                  imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
+                  imageUrl: 'https://app1.legco.gov.hk/gallery/photo/327/15949717277_o.jpg',                  
                   size: 'large',
                   id: 5,
-                  linkUrl: 'shop/mens'
+                  linkUrl: 'mens'
                 }
               ]
         }
@@ -46,9 +46,10 @@ class Directory extends React.Component{
     render() { 
         return (
             <div className='directory-menu'>
-                {
-                    this.state.sections.map(({title, imageUrl, id, size}) => (
-                        <MenuItem key={id} title={title} imageUrl={imageUrl} size={size} />
+            {
+              // important
+                    this.state.sections.map(({id,...otherSectionProps}) => (
+                      <MenuItem key={id} {...otherSectionProps} />
                     ))
                 }
             </div>
