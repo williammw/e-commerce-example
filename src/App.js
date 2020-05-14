@@ -18,7 +18,7 @@ function App() {
         <Route path='/shop' component={ShopPage} />
         <Route path='/signIn' component={SignInAndSignUpPage} />        
       </Switch>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
