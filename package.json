@@ -1,5 +1,5 @@
 {
-  "homepage":"http://williammw.github.io/e-commerce-example",
+  "homepage": "http://williammw.github.io/e-commerce-example",
   "name": "e-commerce-example",
   "version": "0.1.0",
   "private": true,
@@ -18,11 +18,12 @@
     "react-select": "^3.1.0",
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
+    "redux-persist": "^6.0.0",
     "reselect": "^4.0.0"
   },
   "scripts": {
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
