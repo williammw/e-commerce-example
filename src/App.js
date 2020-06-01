@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 
 import Header from './components/header/header.component';
 import HomePage from './pages/homepage/homepage';
-import ShopPage from './pages/shop/shoppage.component';
+import ShopPage from './pages/shop/shop.component';
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
 import Footer from './pages/footer/footer.component';
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
