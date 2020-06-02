@@ -28,6 +28,6 @@ const CartDropdown = ({cartItems, history, dispatch}) => (
 )
 const mapStateToProps = ({ cart: { cartItems } }) => ({
     cartItems
-}  )
+})
 
 export default withRouter(connect(mapStateToProps)(CartDropdown));
