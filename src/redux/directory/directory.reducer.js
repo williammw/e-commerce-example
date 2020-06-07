@@ -4,7 +4,7 @@ const INITAL_STATE = {
           title: 'hats',
           imageUrl: 'https://app1.legco.gov.hk/gallery/photo/325/11281398304_o.jpg',
           id: 1,
-          linkUrl: 'hats'                  
+          linkUrl: 'shop/hats'                  
         },
         {
           title: 'jackets',

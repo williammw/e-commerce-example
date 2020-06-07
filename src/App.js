@@ -9,17 +9,21 @@ import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shop/shop.component';
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
 //import Footer from './pages/footer/footer.component';
-import { auth, createUserProfileDocument } from './firebase/firebase.utils';
+import { auth, createUserProfileDocument, addCollectionAndDocuments } from './firebase/firebase.utils';
 import { setCurrentUser } from './redux/user/user.action';
 import { createStructuredSelector } from 'reselect';
 import { selectCurrentUser } from './redux/user/user.selector';
 import CheckoutPage from './pages/checkout/checkout.component';
+// import {selectCollectionsForPreview} from './redux/shop/shop.selectors'
+
+
+
 
 class App extends React.Component  {  
   unsubscribeFromAuth = null;
 
   componentDidMount() {
-    const { setCurrentUser } = this.props;
+    const { setCurrentUser, collectionsArray } = this.props;
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
         const userRef = await createUserProfileDocument(userAuth);
@@ -33,6 +37,7 @@ class App extends React.Component  {
         
       }
       setCurrentUser(userAuth);
+      // addCollectionAndDocuments('collections', collectionsArray.map( ({title, items}) => ({ title, items })))
     });
     
   }
@@ -57,7 +62,8 @@ class App extends React.Component  {
 }
 
 const mapStateToProps = createStructuredSelector({
-  currentUser : selectCurrentUser
+  currentUser : selectCurrentUser,
+  // collectionsArray : selectCollectionsForPreview
 })
 
 // dispatch and return an object where the props name will pass into action
