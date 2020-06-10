@@ -25,3 +25,8 @@ export function* fetchCollections() {
 export function* onFetchCollectionsStart() {
   yield takeLatest(ShopActionTypes.FETCH_COLLECTIONS_START, fetchCollections);
 }
+// take 
+
+// takeEvery : dispatch all saga EE
+
+// takeLatest : cancel dispatch all previous and execute the latest saga
