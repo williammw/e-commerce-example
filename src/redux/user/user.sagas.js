@@ -14,7 +14,7 @@ export function* signInWithGoogle() {
 }
 
 export function* onGoogleSignStart() {
-  yield  takeLatest(UserActionTypes.GOOGLE_SIGN_IN_START, )
+  yield  takeLatest(UserActionTypes.GOOGLE_SIGN_IN_START, signInWithGoogle)
 }
 
 export function* userSagas() {
