@@ -4,7 +4,7 @@ import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
 import { connect } from 'react-redux'
 
-import { googleSignInStart, emailSignInStart } from '../../redux/user/user.action'
+import { googleSignInStart, emailSignInStart } from '../../redux/user/user.actions'
 
 import './sign-in.styles.scss';
 
@@ -14,7 +14,7 @@ class SignIn extends React.Component{
     
     this.state = {
         email: '',
-        password:''  
+        password: ''
         }
     }
 
@@ -62,7 +62,6 @@ class SignIn extends React.Component{
           </div>
       )
   }
-
 }
 
 const mapDispatchToProps = dispatch => ({
